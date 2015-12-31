@@ -1,0 +1,37 @@
+- var active = active || "home";
+nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+	.container
+		.navbar-header
+			button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#navbar",aria-expanded="false",aria-controls="navbar")
+				span.sr-only Toggle Navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href="index.html") Ristorante Con Fusion
+		#navbar.navbar-collapse.collapse
+			ul.nav.navbar-nav
+				li(class=active=="home" ? "active" : "" )
+					a.glyphicon.glyphicon-home(href="index.html") &nbsp;Home
+				li(class=active=="aboutus" ? "active" : "" )
+					a.glyphicon.glyphicon-info-sign(href="aboutus.html") &nbsp;About
+				li.dropdown
+					a.dropdown-toggle(href="#",data-toggle="dropdown",role="button",aria-haspopup="true",aria-expanded="false")
+						| Menu
+						span.caret
+					ul.dropdown-menu
+						li
+							a(href="#") Appetizers
+						li
+							a(href="#") Main Courses
+						li
+							a(href="#") Desserts
+						li
+							a(href="#") Drinks
+						li.divider(role="separator")
+						li.dropdown-header Specials
+						li
+							a(href="#") Lunch Buffet
+						li
+							a(href="#") Weekend Brunch
+				li
+					a(href="#") Contact
