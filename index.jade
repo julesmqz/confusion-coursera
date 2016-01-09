@@ -7,28 +7,102 @@ include layout/_header
 			p(style="padding:20px;")
 			h3(align="center") Our Lipsmacking Culinary Creations
 		.col-xs-12.col-sm-9.col-sm-pull-3
-			h2 Uthapizza
-			p A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
-			p
-				a(href="#n") More &raquo;
+			.media
+				.media-left.media-middle
+					a(href="#N")
+						img.media-object.img-thumbnail(src="img/uthappizza.png" alt="Uthappizza")
+				.media-body
+					h2.media-heading
+						|Uthappizza &nbsp;
+						span.label.label-danger Hot 
+						| &nbsp;
+						span.badge $4.99
+					p A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+					p
+						a.btn.btn-primary.btn-xs(href="#N") More &raquo;
 	.row.row-content
 		.col-xs-12.col-sm-3
 			p(style="padding:20px;")
 			h3(align="center") This Month's Promotions
 		.col-xs-12.col-sm-9
-			h2 Weekend Grand Buffet
-			p Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
-			p
-				a(href="#n") More &raquo;
+			.media
+				.media-body
+					h2.media-heading 
+						| Weekend Grand Buffet &nbsp;
+						span.label.label-danger New 
+					p Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+					p
+						a.btn.btn-primary.btn-xs(href="#N") More &raquo;
+				.media-right.media-middle
+					a(href="#N")
+						img.media-object.img-thumbnail(src="img/buffet.png" alt="Weekend Grand Buffet")
 	.row.row-content
 		.col-xs-12.col-sm-3.col-sm-push-9
 			p(style="padding:20px;")
 			h3(align="center") Meet our Culinary Specialists
 		.col-xs-12.col-sm-9.col-sm-pull-3
-			h2 Alberto Somayya
-			h4 Executive Chef
-			p Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
-			p
-				a(href="#n") More &raquo;
+			.media
+				.media-left.media-middle
+					a(href="#N")
+						img.media-object.img-thumbnail(src="img/alberto.png" alt="Alberto Somayya")
+				.media-body
+					h2.media-heading Alberto Somayya
+					h4 Executive Chef
+					p Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+					p
+						a.btn.btn-primary.btn-xs(href="#N") More &raquo;
+	#reserve-table.row.row-content
+		.col-xs-12.col-sm-3
+			p(style="padding:20px;")
+			h3(align="center") Reserve a Table
+		.col-xs-12.col-sm-9
+			form
+				.content
+					.row
+						.col-xs-2.col-sm-2
+							strong Number of Guests
+						.col-xs-10.col-sm-10
+							.form-group
+								label.radio-inline
+									input(type="radio",name="guests",value="1") 
+									| &nbsp; 1
+								label.radio-inline
+									input(type="radio",name="guests",value="2") 
+									| &nbsp; 2
+								label.radio-inline
+									input(type="radio",name="guests",value="3") 
+									| &nbsp; 3
+								label.radio-inline
+									input(type="radio",name="guests",value="4") 
+									| &nbsp; 4
+								label.radio-inline
+									input(type="radio",name="guests",value="5") 
+									| &nbsp; 5
+								label.radio-inline
+									input(type="radio",name="guests",value="6") 
+									| &nbsp; 6
+					.row
+						.col-xs-2.col-sm-2
+							strong Date and Time
+						.col-xs-5.col-sm-5
+							.form-group.has-feedback
+								input.form-control(type="text",placeholder="Date")
+								i.glyphicon.glyphicon-calendar.form-control-feedback
+						.col-xs-5.col-sm-5
+							.form-group.has-feedback
+								input.form-control(type="text",placeholder="Time")
+								i.glyphicon.glyphicon-time.form-control-feedback
+					.row
+						.col-xs-10.col-sm-10.col-sm-push-2
+							button.btn.btn-primary(type="submit") Reserve
+					.row
+						.col-xs-12.col-sm-12
+							.alert.alert-warning.alert-dismissible(role="alert")
+								button.close(type="button",data-dismiss="alert",aria-label="Close")
+									span(aria-hidden="true") &times;
+								p 
+									| Warning Please 
+									strong call 
+									| us to reserve for more than six guests.
 include layout/_footer
 include layout/_scripts
